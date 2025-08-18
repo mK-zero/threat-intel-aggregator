@@ -12,8 +12,8 @@ This tool allows users to input multiple indicators (IP, domain, or file hash) a
 
 ## Architecture Overview
 
-- **Frontend**:
-    -
+- **Frontend**: Streamlit UI
+    - 
     -
     -
     -
@@ -31,15 +31,32 @@ This tool allows users to input multiple indicators (IP, domain, or file hash) a
 ```
 
 ## Dependencies
+    - `streamlit`
+    - `pandas`
+    - `requests`
+    - Custom `config.py` for API key  
+Install with: 
+`pip install streamlit pandas requests`
 
 ## Features
+    - Bulk input support (one query per line)
+    - Scan IPs, domains, or file hashes
+    - Display results in an interactive table
+    - Download results as a CSV file
+    - Handles API errors gracefully
 
 ## Security Notes
-
+    - Never hardcode API key in the main script.
+    - Add `config.py` to your `.gitignore`:  
+        `config.py`
 ## Future Improvements
+    - API response caching
+    - Scan progress indicator
+    - Add scan details
+    - Handle API rate limiting gracefully
 
 ## Getting Started
 
-## License
+## License  
 MIT License - use freely for educational or personal projects
 ---

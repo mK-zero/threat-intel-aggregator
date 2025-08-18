@@ -12,7 +12,7 @@ This application provides a user-friendly Streamlit interface to interact with t
   - **CSV Download**: Offers results as a downloadable CSV file
 
  ### 2. Backend: VirusTotal Lookup Function  
- `def vt_lookup(query, type="ip"):
+ `def vt_lookup(query, type="ip")`:
 
   - **Parameters**:
     - query: the IP/domain/hash to be scanned
@@ -29,7 +29,7 @@ This application provides a user-friendly Streamlit interface to interact with t
 ### 3. Configuration Module: `config.py`
   - This file is expected to hold the `VIRUSTOTAL_API_KEY`
 
- `\# config.py`  
+ `# config.py`  
 `VIRUSTOTAL_API_KEY = "your_api_key_here"`
 
 ## Data Flow
