@@ -1,4 +1,4 @@
-# Threat Intelligence FEed Aggregator
+# Threat Intelligence Feed Aggregator
 
 A lightweight application to scan IP addresses, domains, or file hashes using the VirusTotal API. Displays threat intelligence results in a table and allows CSV export.
 
@@ -56,6 +56,20 @@ Install with:
     - Handle API rate limiting gracefully
 
 ## Getting Started
+
+### 1. Clone the repo
+````bash`  
+`git clone https://github.com/mK-zero/threat-intel-aggregator.git`  
+`cd threat-intel-aggregator`
+### 2. Create virtual environment & install dependencies
+`python -m venv venv`  
+`source venv/bin/activate`   # Windows: `venv\Scripts\activate`  
+`pip install -r requirements.txt`  
+### 3. Add API key
+Create `config.py`:  
+`VIRUSTOTAL_API_KEY = "your_api_key_here"`
+### 4. Run the dashboard
+`streamlit run aggregator.py`
 
 ## License  
 MIT License - use freely for educational or personal projects
