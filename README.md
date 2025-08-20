@@ -17,7 +17,14 @@ This tool allows users to input multiple indicators (IP, domain, or file hash) a
 
 ## Data Flow
 ```mermaid
-
+   graph TD
+      A[User Input] --> B[Streamlit Frontend]
+      B --> C[vt_lookup Function]
+      C -->|API Call| D[VirusTotal API]
+      D -->|JSON Response| C
+      C --> E[Pandas DataFrame]
+      E --> F[Streamlit Data Table]
+      E --> G[CSV Download]
 ```
 
 ## Tech Stack
@@ -68,6 +75,5 @@ Create `config.py`:
 
 
 ## License  
-
 MIT License - use freely for educational or personal projects
 ---
